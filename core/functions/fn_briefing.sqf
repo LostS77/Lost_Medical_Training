@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-#define NEWTAB(NAME) _briefing set [count _briefing, ["Diary",[NAME,"
+#define NEWTAB(NAME) _briefing set [count _briefing, ["Diary", [NAME, "
 #define ENDTAB "]]];
 
 private _briefing = [];
@@ -20,10 +20,18 @@ private _briefing = [];
 private _civBriefing = _briefing;
 
 private _playerBriefing = switch (side player) do {
-	case west: {_westBriefing};
-	case east: {_eastBriefing};
-	case independent: {_indBriefing};
-	case civilian: {_civBriefing};
+	case west: {
+		_westBriefing
+	};
+	case east: {
+		_eastBriefing
+	};
+	case independent: {
+		_indBriefing
+	};
+	case civilian: {
+		_civBriefing
+	};
 };
 
 private _briefing = [];
@@ -37,7 +45,9 @@ private _changeLog = _briefing;
 _playerBriefing append _missionNotes;
 _playerBriefing append _changeLog;
 
-if (!isNil "uo_fnc_hasGMAccess" && {call uo_fnc_hasGMAccess}) then {
+if (!isNil "uo_fnc_hasGMAccess" && {
+	call uo_fnc_hasGMAccess
+}) then {
 	private _briefing = [];
 	#include "..\..\customization\briefings\adminNotes.sqf"
 	private _adminNotes = _briefing;

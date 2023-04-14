@@ -1,14 +1,14 @@
 // Usage:
-// If you wish to use this script from a trigger use the following trigger parameters:
-// Activation: Select the side of your unit.
+// if you wish to use this script from a trigger use the following trigger parameters:
+// Activation: select the side of your unit.
 // Repeatedly
 // On Activation: nul = (thisList select 0) call FW_fnc_gearExport;
-//
+// 
 // Now simply walk into the trigger and the script will export the gear of the unit to your clipboard.
-//
-// If you wish to use this script outside of a trigger use this:
+// 
+// if you wish to use this script outside of a trigger use this:
 // _unit call FW_fnc_gearExport;
-//
+// 
 // Where _unit is the unit the script will scan.
 
 private ["_unit", "_items", "_script", "_addItem"];
@@ -17,8 +17,7 @@ _unit = _this;
 _items = [];
 _script = "";
 
-
-// Clothings //
+// Clothings// 
 
 if (uniform _unit isNotEqualTo "") then {
 	_script = _script + '["' + (uniform _unit) + '"] call FNC_AddItem;
@@ -38,7 +37,7 @@ if (backpack _unit isNotEqualTo "") then {
 _script = _script + "
 ";
 
-// Headgear //
+// headgear// 
 
 if (headgear _unit isNotEqualTo "") then {
 	_script = _script + '["' + (headgear _unit) + '"] call FNC_AddItem;
@@ -53,8 +52,7 @@ if (goggles _unit isNotEqualTo "") then {
 _script = _script + "
 ";
 
-
-// Assigned Items //
+// Assigned items// 
 
 if (assignedItems _unit isNotEqualTo []) then {
 	{
@@ -67,7 +65,7 @@ if (assignedItems _unit isNotEqualTo []) then {
 	} forEach assignedItems _unit;
 };
 
-// Items //
+// items// 
 
 _addItem = {
 	private ["_item", "_slot", "_new"];
@@ -88,11 +86,15 @@ _addItem = {
 	};
 };
 
-
-{[_x, "uniform"] call _addItem} forEach uniformItems _unit;
-{[_x, "vest"] call _addItem} forEach vestItems _unit;
-{[_x, "backpack"] call _addItem} forEach backpackItems _unit;
-
+{
+	[_x, "uniform"] call _addItem
+} forEach uniformItems _unit;
+{
+	[_x, "vest"] call _addItem
+} forEach vestItems _unit;
+{
+	[_x, "backpack"] call _addItem
+} forEach backpackItems _unit;
 
 _script = _script + "
 ";
@@ -102,8 +104,7 @@ _script = _script + "
 	';
 } forEach _items;
 
-
-// Weapons / Attachments //
+// weapons / Attachments// 
 
 if (primaryWeapon _unit isNotEqualTo "") then {
 	_script = _script + '
@@ -139,10 +140,10 @@ if (handgunWeapon _unit isNotEqualTo "") then {
 
 {
 	if (_x isNotEqualTo "") then {
-		_script = _script + '_unit addHandgunItem "' + _x + '";';
+		_script = _script + '_unit addHandgunItem "' + _x + '";
+		';
 	};
 } forEach handgunItems _unit;
-
 
 copyToClipboard _script;
 hint "Gear script exported to the clipboard!";

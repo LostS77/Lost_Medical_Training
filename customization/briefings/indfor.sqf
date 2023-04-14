@@ -7,25 +7,25 @@ This is how you create a <marker name='markerName'>marker</marker>.
 ENDTAB;
 
 NEWTAB("A. Enemy Forces:")
-//Text goes here
+// text goes here
 ENDTAB;
 
 NEWTAB("B. Friendly Forces:")
-//Text goes here
+// text goes here
 ENDTAB;
 
 NEWTAB("II. Mission:")
-//Text goes here
+// text goes here
 ENDTAB;
 
 NEWTAB("III. Execution:")
-//Text goes here
+// text goes here
 ENDTAB;
 
 NEWTAB("IV. Service Support:")
-//Text goes here
+// text goes here
 ENDTAB;
 
 NEWTAB("V. Command & Signal:")
-//Text goes here
+// text goes here
 ENDTAB;

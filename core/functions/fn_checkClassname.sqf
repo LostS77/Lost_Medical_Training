@@ -1,15 +1,15 @@
 /*
- * Author: BlackHawk
- *
- * Check if item classname is valid.
- *
- * Arguments:
- * 0: classname <string>
- *
- * Return Value:
- * is valid <bool>
- *
- * Public: No
+	 * Author: BlackHawk
+	 *
+	 * Check if item className is valid.
+	 *
+	 * Arguments:
+	 * 0: className <string>
+	 *
+	 * Return Value:
+	 * is valid <bool>
+	 *
+	 * Public: No
  */
 
 #include "script_component.hpp"
@@ -20,22 +20,30 @@ params [
 ];
 
 private _result = (isClass (configfile >> "CfgWeapons" >> _class)
-|| {(isClass (configFile >> "CfgMagazines" >> _class))}
-|| {(isClass (configFile >> "CfgGlasses" >> _class))}
-|| {(isClass (configFile >> "CfgVehicles" >> _class))}
+|| {
+	(isClass (configFile >> "CfgMagazines" >> _class))
+}
+|| {
+	(isClass (configFile >> "CfgGlasses" >> _class))
+}
+|| {
+	(isClass (configFile >> "CfgVehicles" >> _class))
+}
 );
 
 if !(_result) then {
 	if !(isMultiplayer) then {
-        ERROR_1("Invalid classname given! - %1",_class);
+		ERROR_1("Invalid classname given! - %1", _class);
 	};
 	[_class, {
 		params ["_class"];
 		if (isNil QGVAR(missing_gear_found)) then {
-            GVAR(missing_gear_found) = [_class];
+			GVAR(missing_gear_found) = [_class];
 		} else {
-            ERROR_1("Framework has detected an invalid classname - %1! Mission will continue but some parts of gear will be missing.",str _class);
-            if !((GVAR(missing_gear_found) findif {_x isEqualTo _class}) isEqualTo -1) then {
+			ERROR_1("Framework has detected an invalid classname - %1! Mission will continue but some parts of gear will be missing.", str _class);
+			if !((GVAR(missing_gear_found) findIf {
+				_x isEqualTo _class
+			}) isEqualTo -1) then {
 				GVAR(missing_gear_found) pushBackUnique _class;
 			};
 		};

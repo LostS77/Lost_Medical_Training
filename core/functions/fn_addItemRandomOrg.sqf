@@ -1,16 +1,16 @@
 /*
- * Author: Olsen
- *
- * Add random item to unit.
- *
- * Arguments:
- * 0: unit <object> and loadout name <string> <array>
- * 1: items <array>
- *
- * Return Value:
- * nothing
- *
- * Public: No
+	 * Author: Olsen
+	 *
+	 * Add random item to unit.
+	 *
+	 * Arguments:
+	 * 0: unit <object> and loadout name <string> <array>
+	 * 1: items <array>
+	 *
+	 * Return Value:
+	 * nothing
+	 *
+	 * Public: No
  */
 
 #include "script_component.hpp"

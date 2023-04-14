@@ -54,9 +54,8 @@ private _teamTextArray = [];
 		} forEach _destroyed;
 	};
 
-	//_temp = _temp + "<br />";
+	// _temp = _temp + "<br />";
 	_teamTextArray pushBack _temp;
-
 } forEach _teams;
 
 private _endTitleText = _scenario;
@@ -77,13 +76,13 @@ private _dia = uiNamespace getVariable QGVAR(EndScreen);
 (_dia displayCtrl _endTitle) ctrlSetStructuredText parseText _endTitleText;
 
 switch (count _teamTextArray) do {
-    case 2: {
+	case 2: {
 		(_dia displayCtrl _left2) ctrlSetStructuredText parseText (_teamTextArray select 0);
 		(_dia displayCtrl _right2) ctrlSetStructuredText parseText (_teamTextArray select 1);
 
 		(_dia displayCtrl _bottomLeft2) ctrlSetStructuredText parseText (_ammoInfo select 0);
 		(_dia displayCtrl _bottomRight2) ctrlSetStructuredText parseText (_ammoInfo select 1);
-    };
+	};
 	case 3: {
 		(_dia displayCtrl _left3) ctrlSetStructuredText parseText (_teamTextArray select 0);
 		(_dia displayCtrl _middle3) ctrlSetStructuredText parseText (_teamTextArray select 1);
@@ -92,7 +91,7 @@ switch (count _teamTextArray) do {
 		(_dia displayCtrl _bottomLeft3) ctrlSetStructuredText parseText (_ammoInfo select 0);
 		(_dia displayCtrl _bottomMiddle3) ctrlSetStructuredText parseText (_ammoInfo select 1);
 		(_dia displayCtrl _bottomRight3) ctrlSetStructuredText parseText (_ammoInfo select 2);
-    };
+	};
 	case 4: {
 		(_dia displayCtrl _left4) ctrlSetStructuredText parseText (_teamTextArray select 0);
 		(_dia displayCtrl _middleLeft4) ctrlSetStructuredText parseText (_teamTextArray select 1);
@@ -103,24 +102,25 @@ switch (count _teamTextArray) do {
 		(_dia displayCtrl _bottomMiddleLeft4) ctrlSetStructuredText parseText (_ammoInfo select 1);
 		(_dia displayCtrl _bottomMiddleRight4) ctrlSetStructuredText parseText (_ammoInfo select 2);
 		(_dia displayCtrl _bottomRight4) ctrlSetStructuredText parseText (_ammoInfo select 3);
-    };
-    default {
-    	//code
-    };
+	};
+	default {
+		// code
+	};
 };
 
 GVAR(endScreenPFH) = [{
-    params ["_args", "_idPFH"];
+	params ["_args", "_idPFH"];
 	_args params ["_dia", "_bg", ["_count", 0, [0]]];
 	private _alpha = (_count * (1/120));
 	_count = _count + 1;
 	_args set [2, _count];
-    (_dia displayCtrl _bg) ctrlSetBackgroundColor [0, 0, 0, _alpha];
-	//if (_count > 120) exitWith {
-	//	[_idPFH] call CBA_fnc_removePerFrameHandler;
-	//};
+	(_dia displayCtrl _bg) ctrlSetBackgroundColor [0, 0, 0, _alpha];
+	// if (_count > 120) exitWith {
+		// [_idPFH] call CBA_fnc_removePerFrameHandler;
+		//
+	};
 }, 0, [_dia, _bg]] call CBA_fnc_addPerFrameHandler;
 
 [{
-    endMission "END1";
+	endMission "END1";
 }, [], 15] call CBA_fnc_waitAndExecute;

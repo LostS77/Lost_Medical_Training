@@ -1,24 +1,24 @@
 /*
- * Author: Olsen
- *
- * Counts number of casualties on set team
- *
- * Arguments:
- * 0: team <string>
- *
- * Return Value:
- * casualty count <number>
- *
- * Public: Yes
+	 * Author: Olsen
+	 *
+	 * Counts number of casualties on set team
+	 *
+	 * Arguments:
+	 * 0: team <string>
+	 *
+	 * Return Value:
+	 * casualty count <number>
+	 *
+	 * Public: Yes
  */
 
 #include "script_component.hpp"
 
 params ["_team"];
 
-//IGNORE_PRIVATE_WARNING ["_start", "_current", "_team"];
-GETTEAMVAR(_start,_team,"TOTAL");
-GETTEAMVAR(_current,_team,"CURRENT");
+// IGNORE_PRIVATE_WARNING ["_start", "_current", "_team"];
+GETTEAMVAR(_start, _team, "TOTAL");
+GETTEAMVAR(_current, _team, "CURRENT");
 
 private _count = 0;
 

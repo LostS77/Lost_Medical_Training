@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 params [
-    ["_unit", objNull, [objnull]]
+	["_unit", objNull, [objNull]]
 ];
 
 _unit setCaptive false;

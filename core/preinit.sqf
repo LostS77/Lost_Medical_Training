@@ -22,5 +22,5 @@ GVAR(Modules) = [];
 ["ace_firedNonPlayer", FUNC(firedEH)] call CBA_fnc_addEventHandler;
 ["ace_firedNonPlayerVehicle", FUNC(firedEH)] call CBA_fnc_addEventHandler;
 
-#include "..\customization\inits\PreInitGlobal.sqf" //DO NOT REMOVE
-#include "..\modules\modules.sqf" //DO NOT REMOVE
+#include "..\customization\inits\PreInitGlobal.sqf"// do not REMOVE
+#include "..\modules\modules.sqf"// do not REMOVE

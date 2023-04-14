@@ -1,35 +1,39 @@
 /*
- * Author: Olsen
- *
- * If unit's alive, reduce number of units on it's side.
- *
- * Arguments:
- * 0: unit that disconnected <object>
- *
- * Return Value:
- * nothing, false <bool> if not found
- *
- * Public: No
+	 * Author: Olsen
+	 *
+	 * If unit's alive, reduce number of units on it's side.
+	 *
+	 * Arguments:
+	 * 0: unit that disconnected <object>
+	 *
+	 * Return Value:
+	 * nothing, false <bool> if not found
+	 *
+	 * Public: No
  */
 
 #include "script_component.hpp"
 
 params ["_unit", "_id", "_uid", "_name"];
 
-TRACE_1("HandleDisconnect",_this);
+TRACE_1("HandleDisconnect", _this);
 
-if (GETVAR(_unit,Tracked,false)) then {
-	GVAR(Teams) apply {
+if (GETVAR(_unit, Tracked, false)) then {
+	GVAR(teams) apply {
 		_x params ["", "_side", "_type", "_total", "_current"];
-		if ((GETVAR(_unit,Side,sideUnknown)) isEqualTo _side) exitWith {
+		if ((GETVAR(_unit, side, sideUnknown)) isEqualTo _side) exitWith {
 			if (_unit call FUNC(isAlive)) then {
 				_x set [3, _total - 1];
 				_x set [4, _current - 1];
-				SETPVAR(_unit,Dead,true);
+				SETPVAR(_unit, Dead, true);
 			};
 		};
 	};
-	if ((GVAR(DisconnectBodyCleanupTime) < 0) && {(CBA_missionTime < (GVAR(DisconnectBodyCleanupTime) * 60))} && {(side _unit) in GVAR(DisconnectBodyCleanupSides)}) then {
+	if ((GVAR(DisconnectBodyCleanupTime) < 0) && {
+		(CBA_missionTime < (GVAR(DisconnectBodyCleanupTime) * 60))
+	} && {
+		(side _unit) in GVAR(DisconnectBodyCleanupSides)
+	}) then {
 		deleteVehicle _unit;
 	};
 };
