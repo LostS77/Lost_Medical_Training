@@ -12,7 +12,7 @@ ACE_medical_consumeItem_PAK = 0;
 
 ACE_medical_amountOfReviveLives = 1;		//Number of revives
 
-ACE_medical_enableFor = 0;					//0: No AI, 1: AI
+ACE_medical_enableFor = 1;					//0: No AI, 1: AI
 
 ACE_medical_maxReviveTime = 600;			//Time until death when unconscious
 
