@@ -36,7 +36,7 @@ class Teams {
         disconnectBodyCleanUp = true;
         // List, in order (left to right) of which units are in the secession of command for CO in a mission
         // example: CoC_override[] = {"comd1", "plSgt1"};
-        CoC_override[] = {};
+        CoC_override[] = {"us_pl", "us_psg"};
         // Whether the team will be shown on the end screen statistics
         endScreenDisplay = true;
     };
