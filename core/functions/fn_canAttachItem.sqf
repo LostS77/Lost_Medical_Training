@@ -1,16 +1,16 @@
 /*
-	 * Author: Olsen
-	 *
-	 * Check if accessory can be attached.
-	 *
-	 * Arguments:
-	 * 0: unit <object>
-	 * 1: type <string>
-	 *
-	 * Return Value:
-	 * can attach <bool>
-	 *
-	 * Public: No
+ * Author: Olsen
+ *
+ * Check if accessory can be attached.
+ *
+ * Arguments:
+ * 0: unit <object>
+ * 1: type <string>
+ *
+ * Return Value:
+ * can attach <bool>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

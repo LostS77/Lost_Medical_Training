@@ -1,16 +1,16 @@
 /*
-	 * Author: Olsen
-	 *
-	 * Check if item can be linked.
-	 *
-	 * Arguments:
-	 * 0: unit <object>
-	 * 1: type <string>
-	 *
-	 * Return Value:
-	 * can link <bool>
-	 *
-	 * Public: No
+ * Author: Olsen
+ *
+ * Check if item can be linked.
+ *
+ * Arguments:
+ * 0: unit <object>
+ * 1: type <string>
+ *
+ * Return Value:
+ * can link <bool>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

@@ -1,17 +1,17 @@
 /*
-	 * Author: Olsen
-	 *
-	 * Assigns name and team info to an asset.
-	 *
-	 * Arguments:
-	 * 0: asset <object>
-	 * 1: name <string>
-	 * 2: team <string>
-	 *
-	 * Return Value:
-	 * nothing
-	 *
-	 * Public: Yes
+ * Author: Olsen
+ *
+ * Assigns name and team info to an asset.
+ *
+ * Arguments:
+ * 0: asset <object>
+ * 1: name <string>
+ * 2: team <string>
+ *
+ * Return Value:
+ * nothing
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"

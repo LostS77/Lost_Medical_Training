@@ -9,22 +9,16 @@ private _offset = [0, 0];
 
 if !(_position isEqualType []) then {
 	if (is3DEN) then {
-		all3DENEntities params ["_objects", "", "", "_systems", "", "_markers"];
-		private _index = _markers findIf {
-			((_x get3DENAttribute "markerName") select 0) == _position
-		};
+		all3DENEntities params ["_objects","","","_systems","","_markers"];
+		private _index = _markers findIf {((_x get3DENAttribute "markerName") select 0) == _position};
 		if (_index > -1) then {
 			_position = ((_markers select _index) get3DENAttribute "position") select 0;
 		} else {
-			private _index = _systems findIf {
-				((_x get3DENAttribute "Name") select 0) == _position
-			};
+			private _index = _systems findIf {((_x get3DENAttribute "Name") select 0) == _position};
 			if (_index > -1) then {
 				_position = ((_systems select _index) get3DENAttribute "position") select 0;
 			} else {
-				private _index = _objects findIf {
-					((_x get3DENAttribute "Name") select 0) == _position
-				};
+				private _index = _objects findIf {((_x get3DENAttribute "Name") select 0) == _position};
 				if (_index > -1) then {
 					_position = ((_objects select _index) get3DENAttribute "position") select 0;
 				};
@@ -75,7 +69,7 @@ for "_y" from 0 to (count _text - 1) do {
 	];
 };
 
-_markerArray append (GETMVAR(markerArray, []));
-SETMVAR(markerArray, _markerArray);
+_markerArray append (GETMVAR(markerArray,[]));
+SETMVAR(markerArray,_markerArray);
 
 _markerArray

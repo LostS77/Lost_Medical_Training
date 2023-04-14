@@ -1,17 +1,17 @@
 /*
-	 * Author: Olsen
-	 *
-	 * Add module to list.
-	 *
-	 * Arguments:
-	 * 0: name <string>
-	 * 1: description <string>
-	 * 2: author <string>
-	 *
-	 * Return Value:
-	 * nothing
-	 *
-	 * Public: Yes
+ * Author: Olsen
+ *
+ * Add module to list.
+ *
+ * Arguments:
+ * 0: name <string>
+ * 1: description <string>
+ * 2: author <string>
+ *
+ * Return Value:
+ * nothing
+ *
+ * Public: Yes
  */
 
 #include "script_component.hpp"

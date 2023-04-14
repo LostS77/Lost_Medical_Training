@@ -1,17 +1,17 @@
 /*
-	 * Author: Olsen
-	 *
-	 * Remove all gear from vehicle.
-	 *
-	 * Arguments:
-	 * 0: vehicle <object>
-	 *
-	 * Return Value:
-	 * nothing
-	 *
-	 * Public: No
+ * Author: Olsen
+ *
+ * Remove all gear from vehicle.
+ *
+ * Arguments:
+ * 0: vehicle <object>
+ *
+ * Return Value:
+ * nothing
+ *
+ * Public: No
  */
-
+ 
 #include "script_component.hpp"
 
 params ["_vehicle"];
