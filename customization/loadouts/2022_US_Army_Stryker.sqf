@@ -94,7 +94,6 @@ case (package + "RTO"): {
 //Combat Medic
 //[this, "US_MED"] call FW_fnc_GearScript;
 case (package + "MED"): { 
-	[this, 2] call FW_fnc_ACEM_assignMedic;
 	["rhsusf_spcs_ocp_medic"] call FUNC(AddItem);
 	ADD_GROUP(clothing);
 	ADD_GROUP(IFAK);
