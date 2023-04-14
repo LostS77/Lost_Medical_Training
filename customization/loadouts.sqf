@@ -6,5 +6,5 @@
 //#include "loadouts\2000MSV.sqf"
 //#include "loadouts\2019_BAF.sqf"
 //#include "loadouts\RURiflePlatoon.sqf"
-//#include "2022_US_Army_Stryker.sqf"
-#include "loadouts\USMCRiflePlatoon.sqf"
+#include "loadouts\2022_US_Army_Stryker.sqf"
+//#include "loadouts\USMCRiflePlatoon.sqf"

@@ -109,8 +109,9 @@ case (package + "MED"): {
 	["ACE_epinephrine", 15, "backpack"] call FUNC(AddItem);
 	["ACE_tourniquet", 10, "backpack"] call FUNC(AddItem);
   	["ACE_splint", 10, "backpack"] call FUNC(AddItem);
-	["ACE_salineIV_250",8,"backpack"] call FUNC(AddItem);
- 	["ACE_salineIV_500",6,"backpack"] call FUNC(AddItem);
+	["ACE_salineIV_250", 10, "backpack"] call FUNC(AddItem);
+ 	["ACE_salineIV_500", 6, "backpack"] call FUNC(AddItem);
+	["ACE_salineIV", 3, "backpack"] call FUNC(AddItem);
 };
 
 //UAV Operator
