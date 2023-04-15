@@ -3,7 +3,7 @@ viewDistance = 2500; //View distance for the player
 
 class StartOnSafe {
     enabled = true;
-    lowered = false;
+    lowered = true;
     unloaded = false;
 };
 

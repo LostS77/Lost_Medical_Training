@@ -1,6 +1,6 @@
 viewDistance = 2500; //View distance for the server (the ai's)
 
-timeLimit = 30; //Time limit in minutes, to disable the time limit set it to 0
+timeLimit = 0; //Time limit in minutes, to disable the time limit set it to 0
 timeLimitMessage = "TIME LIMIT REACHED!"; //The message displayed when the time runs out
 endConditionFrequency = 60; // Frequency in seconds that the end conditions are checked
 

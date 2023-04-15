@@ -6,8 +6,7 @@
 // deleteVehicle pat1;
 sleep 2;
 _group1=createGroup west;
-'B_CTRG_soldier_M_medic_F' createUnit [getmarkerPos 'PatientSpawn', _group1, 'pat1=this;
-dostop pat1'];
+'B_CTRG_soldier_M_medic_F' createUnit [getmarkerPos 'PatientSpawn', _group1, 'pat1=this; dostop pat1'];
 pat1 disableAI "ALL";
 pat1 setUnconscious false;
 sleep 2;

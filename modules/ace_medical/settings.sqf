@@ -18,6 +18,8 @@ ACE_medical_maxReviveTime = 600;			//Time until death when unconscious
 
 ACE_medical_preventInstaDeath = true;		//Prevents instant death, will send you to revive mode always
 
+//ACE_medical_treatment_advancedBandages = 2; // Wounds can re-open until stitched.
+
 //functions:
 /*
  * FW_fnc_ACEM_assignMedic
